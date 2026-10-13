@@ -10,29 +10,17 @@ A live weather dashboard for eight major Israeli cities. FastAPI fetches current
 
 MET Norway asks API clients to identify themselves with a descriptive `User-Agent`. Set `MET_NO_USER_AGENT` to an application name and a contact address when deploying.
 
-## Run the backend
+## Run everything with one command
+
+From the project root, start both services together:
 
 ```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
-
-The API runs at `http://localhost:8000`. Browse to `http://localhost:8000/docs` for interactive API documentation.
-
-## Run the frontend
-
-In a second terminal:
-
-```bash
-cd frontend
-npm install
 npm run dev
 ```
 
-Open the Vite URL shown in the terminal (usually `http://localhost:5173`). Vite proxies `/api` requests to FastAPI.
+This command creates the backend virtual environment if needed, installs both the Python and Node dependencies, and launches the FastAPI API and the Vite frontend at the same time.
+
+The API runs at `http://localhost:8000` and the frontend is usually served on `http://localhost:5173`. Browse to `http://localhost:8000/docs` for interactive API documentation.
 
 ## API
 
