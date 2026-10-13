@@ -1,2 +1,1 @@
-# calculator-game
-calculator
+# weather website
